@@ -202,7 +202,7 @@ void printFibo(long prev, long cur, long fibo, int n){
     String wordSet4 [] = {"on ", "in ", "around ", "near ", "under "};
     String wordSet5 [] = {"stages.", "tables.", "cages.", "computers.", "glaciers."};
     
-    randomSeed(1);
+    randomSeed(analogRead(0));
     
     Serial.println(wordSet1[int(random(4))] + wordSet2[int(random(4))] + wordSet3[int(random(4))] + wordSet4[int(random(4))] + wordSet5[int(random(4))]);
     
