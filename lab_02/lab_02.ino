@@ -72,9 +72,20 @@
  
  void allOn(){
    
+   for (int i = 0; i <= 8; i++){
+   
    for (int i = 0; i <= 7; i++){
      digitalWrite(pin[i], HIGH);
-     
+   }//end for loop
+   
+   delay(500);
+   
+   for (int i = 0; i <= 7; i++){
+     digitalWrite(pin[i], LOW);
+   }//end for loop
+   
+   delay(500);
+   
    }//end for loop
    
  }//end allOn
@@ -91,4 +102,5 @@ void loop() {
   blinkLineFast();
   everyOther();
   upAndDown();
+  allOn();
 }//end loop
