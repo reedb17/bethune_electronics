@@ -66,20 +66,20 @@ void draw()//Draw waveshape
   vco.setVal(arduino.analogRead(3));
 
   // EG
-  text("EG", 20, 25);
-  eg.drawWave(255, 255, 255, 2, 100, 10);  //run drawWave function (r, g, b, thickness of line)
+  text("Potentiometer", 20, 25);
+  eg.drawWave(100, 255, 255, 2, 100, 10);  //run drawWave function (r, g, b, thickness of line)
 
   // LFO
-  text("LFO", 20, 125);
-  lfo.drawWave(255, 255, 255, 2, 200, 10);
+  text("Glide Sensor", 20, 125);
+  lfo.drawWave(255, 100, 255, 2, 200, 10);
   
   // VCF
-  text("VCF", 20, 225);
-  vcf.drawWave(255, 255, 255, 2, 300, 10);
+  text("Light Sensor", 20, 225);
+  vcf.drawWave(255, 255, 100, 2, 300, 10);
   
   // VCO
-  text("VCO", 20, 325);
-  vco.drawWave(255, 255, 255, 2, 400, 10);
+  text("Flex Sensor", 20, 325);
+  vco.drawWave(100, 100, 255, 2, 400, 10);
   
   keyPressed();
 
