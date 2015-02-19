@@ -11,6 +11,8 @@ Servo servoB;
 //setup
 void setup() {
   //attach servo to Pin 9
+  Serial.begin(9600);
+  
   servoA.attach(9);
   servoB.attach(10);
   
@@ -69,6 +71,17 @@ void setup() {
 
 
 void loop() {
+  if (analogRead(0) > 550 ){
+    servoA.write(0);
+    servoB.write(180);
+    
+  }
   
+  if (analogRead(0) < 550 ) {
+    servoA.write(90);
+    servoB.write(90);
+    
+    
+  }
   
 }//end loop
